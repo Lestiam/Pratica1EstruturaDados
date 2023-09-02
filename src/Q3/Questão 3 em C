@@ -1,0 +1,21 @@
+/* Feito em sala:
+Faça um programa na Linguagem C usando ponteiro, que receba dois valores
+inteiros dentro de uma função e realize a soma. A função poderá ser do tipo do
+tipo void, assim, a resposta é retornada pelo parâmetro resultado, que é um
+ponteiro.
+*/
+
+#include <stdio.h>
+
+void soma(int val1, int val2, int *r) {
+	*r = val1 + val2; //*r vai apontar para o resultado la em baixo
+}
+
+int main() {
+	int val1 = 10, val2 = 20;
+	int r;
+
+	soma(val1, val2, &r); //aqui eu paço 10 ,20 e passo o endereço para receber o ponteiro
+	printf("Resultado: %d\n", r);
+	return 0;
+}
